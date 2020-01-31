@@ -7,7 +7,7 @@
 
 section {
     border: black 2px solid; 
-    background-color: rgba(187, 101, 94, 0.733);
+    background-color:#f4effc;
     height: 75vh;
     width: 25vw;
     margin: 25px;
@@ -15,6 +15,7 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    color: rgb(31, 18, 53);
     
 }
 
@@ -34,13 +35,17 @@ section {
     /* border: 2px solid black; */
 }
 
-#socials {
+.socials {
     margin-top:0;
     height: 10%;
     display: flex;
     justify-content: space-evenly;
     align-content: center;
-    /* border: 2px solid black; */
+    
+}
+
+.socials span:hover {
+    text-shadow: 2px 2px rgb(165, 140, 209);
 }
 
 .links {
@@ -48,12 +53,15 @@ section {
    padding:4px 
 }
 
-#intro {
+#nav-bar , #intro {
     height: 80%;
     border: 2px solid black;
     text-align: start;
+    border-radius: 10%; 
+}
+
+#intro {
     background-image: url("./images/hi.jpg");
-    border-radius: 10%;
     background-size: cover;
 }
 
@@ -72,4 +80,26 @@ section {
    
     height: 90vh; 
     width: 60vw;
+}
+
+#nav-bar {
+    background-color: white;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-content: space-around;
+    
+}
+
+#nav-bar a {
+    padding: 24px;
+    font-size: 32px;
+    text-align: center;
+    color: rgb(31, 18, 53);
+    text-decoration: none;
+    
+}
+
+#nav-bar a:hover {
+    text-decoration: underline;
 }
