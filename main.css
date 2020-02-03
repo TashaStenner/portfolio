@@ -161,6 +161,8 @@ section {
     align-content: center;
     flex-direction: row;
     flex-flow: wrap;
+    position: relative;
+    background:
 }
 
 .inside-box div {
