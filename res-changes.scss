@@ -1,0 +1,28 @@
+@import "./variables.scss";
+
+.main-page-menu {
+       width: 25vw;
+       margin-left: $standard-margin*3; 
+       height: 75vh;
+}
+
+
+h2 {
+    font-size: 40px;
+    margin:$standard-margin;
+
+}
+
+#bottom-left {
+    display: grid;
+}
+
+.side-bar {
+    height: 70vh;
+    width: 30vw;
+    
+
+    h1 {
+        word-break: break-all;
+    }
+}

@@ -1,0 +1,89 @@
+@mixin flex-column {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex-row {
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@mixin odd-border {
+    border-width: 3px 3px 5px 5px;
+    border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+    transform: rotate(-2deg);
+}
+
+@mixin even-border {
+    border-width: 3px 4px 3px 5px;
+    border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+    transform: rotate(2deg);
+}
+
+@mixin even-border2{
+    border-width: 5px 3px 3px 5px;
+    border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+    transform: rotate(2deg);
+}
+
+@mixin odd-box-inner{
+    margin:15px;
+    transform: rotate(-2deg);
+  }
+
+@mixin even-box-inner{
+    transform: rotate(2deg);
+    margin:15px;
+    padding:0 5px;
+    float:right;
+    background:#ddd;
+    border:1px solid #222;
+    box-shadow:3px 3px 0 #222;
+  }
+
+  @mixin grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto;
+  }
+
+@mixin speech {
+    background-color:#fff;
+    border:solid 2px #000;
+    border-radius:12px;
+    display:inline-block;
+    margin:.5em;
+    padding:.5em 1em;
+    position:relative;
+  }
+  
+@mixin speechbefore {
+    border:solid 12px transparent;
+    border-left:solid 12px #000;
+    border-top:solid 12px #000;
+    bottom:-24px;
+    content:"";
+    height:0;
+    left:24px;
+    position:absolute;
+    transform:skew(-15deg);
+    width:0;
+  }
+  
+@mixin speechafter {
+    border:solid 10px transparent;
+    border-left:solid 10px #fff;
+    border-top:solid 10px #fff;
+    bottom:-19px;
+    content:"";
+    height:0;
+    left:27px;
+    position:absolute;
+    transform:skew(-15deg);
+    width:0;
+  }
+ 
