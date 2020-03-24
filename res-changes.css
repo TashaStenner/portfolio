@@ -1,0 +1,25 @@
+.main-page-menu {
+  width: 25vw;
+  margin-left: 24px;
+  height: 75vh;
+}
+
+h2 {
+  font-size: 40px;
+  margin: 8px;
+}
+
+#bottom-left {
+  display: -ms-grid;
+  display: grid;
+}
+
+.side-bar {
+  height: 70vh;
+  width: 30vw;
+}
+
+.side-bar h1 {
+  word-break: break-all;
+}
+/*# sourceMappingURL=res-changes.css.map */
