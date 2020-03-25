@@ -204,11 +204,12 @@ body {
 
 .side-bar #heading {
   background-image: url("./images/cartoon-boom.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 22vh;
-  width: 30vw;
+  overflow: hidden;
+  height: 20vh;
+  width: 28vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -229,6 +230,7 @@ body {
 
 .side-bar #heading h1 {
   padding: 8px;
+  margin-left: 8px;
   font-size: 28px;
 }
 
@@ -236,6 +238,10 @@ body {
   font-size: 24px;
   text-align: center;
   color: #1f1235;
+}
+
+.side-bar h2 {
+  text-align: center;
 }
 
 .side-bar .socials {
@@ -257,16 +263,10 @@ body {
           justify-content: space-evenly;
   font-size: 20px;
   height: 55%;
-  width: 90%;
+  width: 95%;
   color: #1f1235;
-  border-width: 3px 4px 3px 5px;
-  border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
+  border-radius: 5px;
   background-color: #f4effc;
-  border: 2px solid #000000;
 }
 
 .side-bar .socials:visited {
@@ -312,11 +312,6 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  border-width: 3px 3px 5px 5px;
-  border-radius: 4% 95% 6% 95%/95% 4% 92% 5%;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
-  border: 2px solid #000000;
   margin: 3px;
   text-align: center;
   background-color: #f4effc;
@@ -328,37 +323,26 @@ body {
   border: none;
 }
 
-#about-me-grid {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
+#about-me {
   height: 100vh;
-  width: 80vw;
-  margin: auto;
-}
-
-#about-me-grid div {
-  height: 100%;
-  width: 100%;
-}
-
-#about-me-grid .speech {
-  background-color: #fff;
-  border: solid 2px #000;
-  border-radius: 12px;
-  display: inline-block;
-  margin: .5em;
-  padding: .5em 1em;
+  width: 100vw;
   position: relative;
+  text-align: center;
 }
 
-#about-me-grid img {
-  height: 50vh;
-  margin: auto;
-  border-radius: 50%;
+#about-me h2 {
+  color: rgba(247, 247, 247, 0.863);
+  padding: 8px;
+}
+
+#about-me .peering {
+  height: 30%;
+  width: 50%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 90%;
+  border: 2px solid black;
 }
 
 #bottom-half {
@@ -396,6 +380,14 @@ body {
   color: #f5cb34;
   top: 40%;
   text-shadow: 3px 2px black;
+}
+
+#bottom-half #section1 .card h2 a, #bottom-half #section2 .card h2 a {
+  color: #f5cb34;
+}
+
+#bottom-half #section1 .card h2 a :hover, #bottom-half #section2 .card h2 a :hover {
+  font-size: 16px;
 }
 
 #bottom-half #section1 .card img, #bottom-half #section2 .card img {

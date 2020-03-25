@@ -120,6 +120,8 @@ body {
     align-content: flex-start;
 }
 
+// ---> sidebar <---
+
 .side-bar {
     position: fixed;
     top: 0;
@@ -145,17 +147,19 @@ body {
     #heading {
 
         background-image: url("./images/cartoon-boom.png");
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        height: 22vh;
-        width: 30vw;
+        overflow: hidden;
+        height: 20vh;
+        width: 28vw;
         @include flex-column;
         justify-content: center;
         
 
         h1 {
             padding: 8px;
+            margin-left: 8px;
             font-size: 28px;
         }
     }    
@@ -166,18 +170,19 @@ body {
         color: $brand-font-color;
     }
 
+    h2 {
+        text-align: center;
+    }
+
     .socials {
         @include flex-column;
         justify-content: space-evenly;
         font-size: 20px;
         height: 55%;
-        width: 90%;
+        width: 95%;
         color:  $brand-font-color;
-        @include even-border;
-        transform: rotate(0deg);
+        border-radius: 5px;
         background-color: $nav-bar-background;
-        // background-color: $side-secondary;
-        border: $basic-border;
 
         &:visited { 
             color: $brand-font-color;
@@ -201,8 +206,6 @@ body {
         div {
             @include flex-column;
             justify-content: space-evenly;    
-            @include odd-border;
-            border: $basic-border;
             margin: 3px;
             text-align: center;
             background-color: $nav-bar-background;
@@ -217,94 +220,27 @@ body {
 }
 
 // ---> about me <---
+#about-me {
+    height:100vh;
+    width: 100vw;
+    position: relative;
+    text-align: center;
 
-#about-me-grid {
-    @include grid;
-    height: 100vh;
-    width: 80vw;
-    margin: auto;
-    
-    div {
-        height: 100%;
-        width: 100%;
+    h2 {
+        color: rgba(247, 247, 247, 0.863);
+        padding: $standard-padding;
+    }
 
-        
+    .peering {
+        height: 30%;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        bottom: 0; 
+        border-top-left-radius: 90%;
+        border:2px solid black;
     }
-    .speech{
-        @include speech;
-       
-        
-    }
-    img {
-        height: 50vh;
-        margin: auto;
-        border-radius: 50%;
-
-    }
-    // .speech {
-    //     @include speech;
-    //     @include speechbefore;
-    //     @include speechafter;
-    // }
 }
-
-
-
-// #about-page {
-//     @include grid;
-//     grid-template-columns: 30vw 30vw 30vw;
-//     grid-template-rows: 15vh 15vh 15vh 15vh 15vh 15vh ;
-//     margin: 5vw;
-
-//     .page-title {
-//         @include flex-column;
-//         justify-content: center;
-//         align-items: center;
-//         grid-column-start: 1;
-//         grid-column-end: 4;
-//         @include odd-border;
-//         border: $basic-border;
-//         margin: 5px 20px;
-//         background: $nav-bar-background;
-
-//         h2 {
-//             display: flex;
-//             align-items: center;
-//             justify-content: center;
-//             @include even-box-inner;
-//             z-index: 1;
-//         }
-//     }
-    
-//     #about-mid-box {
-//         grid-column-start: 3;
-//         grid-column-end: 4;
-//         grid-row-start: 2;
-//         grid-row-end: 3;
-//         position: relative;
-//         bottom: 15%;
-//         right: 10%;
-//         @include even-border;
-//         transform: rotate(15deg);
-//         border: $basic-border;
-//         background: $nav-bar-background;
-//         height: 130%;
-//         width: 110%;
-//     }
-
-//     .about-text {
-//         z-index: -1;
-//         grid-column-start: 1;
-//         grid-column-end: 4;
-//         grid-row-start: 3;
-//         grid-row-end: 7;
-//         position: relative;
-//         @include even-border;
-//         border: $basic-border;
-//         background: $nav-bar-background;
-//     }    
-
-// }
 
 //Blog and portfolio templates//
 
@@ -325,9 +261,16 @@ body {
            
             h2 {
                 position: absolute;
-                color:#f5cb34;
+                color:$brand-text;
                 top:40%;
-                text-shadow: 3px 2px black;                
+                text-shadow: 3px 2px black;  
+                
+                a {
+                    color: $brand-text;
+                    :hover{
+                        font-size: 16px;
+                    }
+                }
             }
 
             img {
