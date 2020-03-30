@@ -29,3 +29,4 @@ const printFact = () => {
 document
   .getElementById("randomBtn")
   .addEventListener("click", () => printFact());
+

@@ -9,6 +9,7 @@
 body {
   background-image: url(./images/background.png);
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .borders {
@@ -20,7 +21,7 @@ body {
 .main-page-menu {
   height: 95vh;
   width: 90vw;
-  margin: 0;
+  margin: 0 auto;
   padding: 8px;
   margin-top: 16px;
   margin-left: 16px;
@@ -43,6 +44,11 @@ body {
   border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
+}
+
+.main-page-menu h1 {
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
 }
 
 .main-page-menu #heading,
@@ -145,26 +151,45 @@ body {
           transform: rotate(-2deg);
 }
 
-#bottom-left {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  margin: 8px auto auto 8px;
-  height: 95vh;
-  width: 70vw;
-  display: none;
+@media only screen and (min-width: 768px) {
+  .main-page-menu {
+    width: 95vw;
+  }
+  .main-page-menu .socials {
+    -webkit-transform: rotate(-1deg);
+            transform: rotate(-1deg);
+  }
+  .main-page-menu .socials .links {
+    font-size: 28px;
+  }
+  .main-page-menu .intro h2 {
+    margin-left: 24px;
+  }
+  .main-page-menu .intro p {
+    margin: 16px;
+  }
 }
 
-#blog-page,
-#portfolio-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
+@media only screen and (min-width: 1100px) {
+  .main-page-menu h1 {
+    font-size: 50px;
+  }
+  .main-page-menu .socials .links {
+    font-size: 38px;
+  }
+  .main-page-menu .intro h2 {
+    font-size: 48px;
+    margin-left: 48px;
+    letter-spacing: 0.1em;
+  }
+  .main-page-menu .intro p {
+    font-size: 35px;
+    margin: 32px;
+  }
+  .main-page-menu .nav-buttons {
+    font-size: 28px;
+    margin: 24px;
+  }
 }
 
 .side-bar {
@@ -324,6 +349,19 @@ body {
   font-size: 22px;
   margin: 3px;
   border: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .side-bar #heading {
+    overflow: auto;
+    height: 30%;
+  }
+  .side-bar #heading h1 {
+    font-size: 40px;
+  }
+  .side-bar h2 {
+    font-size: 30px;
+  }
 }
 
 #about-me {
