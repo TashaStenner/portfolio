@@ -3,7 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Bangers', cursive;
+  font-family: "Bangers", cursive;
 }
 
 body {
@@ -45,7 +45,8 @@ body {
           transform: rotate(2deg);
 }
 
-.main-page-menu #heading, .main-page-menu div {
+.main-page-menu #heading,
+.main-page-menu div {
   width: 90%;
   text-align: center;
   margin: 8px;
@@ -134,7 +135,8 @@ body {
   text-shadow: 2px 2px #a58cd1;
 }
 
-#nav-bar, .intro {
+#nav-bar,
+.intro {
   border: 2px solid #000000;
   text-align: start;
   border-width: 3px 3px 5px 5px;
@@ -153,7 +155,8 @@ body {
   display: none;
 }
 
-#blog-page, #portfolio-page {
+#blog-page,
+#portfolio-page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,9 +333,97 @@ body {
   text-align: center;
 }
 
-#about-me h2 {
+#about-me #facts {
+  margin: 0 auto;
+  height: 90%;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#about-me #facts h2 {
   color: rgba(247, 247, 247, 0.863);
   padding: 8px;
+  font-size: 30px;
+  margin-top: 24px;
+}
+
+#about-me #facts .paper {
+  background: #fff;
+  padding: 30px;
+  position: relative;
+  width: 90%;
+  height: 50%;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+#about-me #facts .paper,
+#about-me #facts .paper::before,
+#about-me #facts .paper::after {
+  /* Styles to distinguish sheets from one another */
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid #bbb;
+}
+
+#about-me #facts .paper::before,
+#about-me #facts .paper::after {
+  content: "";
+  position: absolute;
+  height: 95%;
+  width: 99%;
+  background-color: #eee;
+}
+
+#about-me #facts .paper::before {
+  right: 15px;
+  top: 0;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
+  z-index: -1;
+}
+
+#about-me #facts .paper::after {
+  top: 5px;
+  right: -5px;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg);
+  z-index: -2;
+}
+
+#about-me #facts #fact {
+  height: 30%;
+  font-size: 26px;
+  margin: 48px auto;
+  -webkit-transform: rotate(25deg);
+          transform: rotate(25deg);
+  color: #ff3434;
+}
+
+#about-me #facts #watermark {
+  color: rgba(0, 0, 0, 0.082);
+  margin: 8px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#about-me #facts #click {
+  width: 45%;
+  padding: 10px 15px;
+  border-radius: 10px;
+  border: 3px solid black;
+  background: white;
+  margin-left: 8px;
 }
 
 #about-me .peering {
@@ -349,7 +440,8 @@ body {
   margin: 8px auto;
 }
 
-#bottom-half #section1, #bottom-half #section2 {
+#bottom-half #section1,
+#bottom-half #section2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -368,29 +460,34 @@ body {
   margin-bottom: 8px;
 }
 
-#bottom-half #section1 .card, #bottom-half #section2 .card {
+#bottom-half #section1 .card,
+#bottom-half #section2 .card {
   height: 30%;
   width: 100%;
   position: relative;
   background-color: black;
 }
 
-#bottom-half #section1 .card h2, #bottom-half #section2 .card h2 {
+#bottom-half #section1 .card h2,
+#bottom-half #section2 .card h2 {
   position: absolute;
   color: #f5cb34;
   top: 40%;
   text-shadow: 3px 2px black;
 }
 
-#bottom-half #section1 .card h2 a, #bottom-half #section2 .card h2 a {
+#bottom-half #section1 .card h2 a,
+#bottom-half #section2 .card h2 a {
   color: #f5cb34;
 }
 
-#bottom-half #section1 .card h2 a :hover, #bottom-half #section2 .card h2 a :hover {
+#bottom-half #section1 .card h2 a :hover,
+#bottom-half #section2 .card h2 a :hover {
   font-size: 16px;
 }
 
-#bottom-half #section1 .card img, #bottom-half #section2 .card img {
+#bottom-half #section1 .card img,
+#bottom-half #section2 .card img {
   height: 100%;
   width: 100%;
   border-width: 3px 3px 5px 5px;
@@ -400,8 +497,15 @@ body {
   opacity: 70%;
 }
 
-#bottom-half #section1 .card img:focus, #bottom-half #section2 .card img:focus {
+#bottom-half #section1 .card img:focus,
+#bottom-half #section2 .card img:focus {
   opacity: 100%;
+}
+
+#bottom-half #section1 p,
+#bottom-half #section2 p {
+  color: white;
+  margin-bottom: 8px;
 }
 
 #portfolio-page #section1 img {

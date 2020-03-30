@@ -1,304 +1,379 @@
-@import"./variables.scss";
-@import"./mixins.scss";
+@import "./variables.scss";
+@import "./mixins.scss";
 
 * {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Bangers', cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Bangers", cursive;
 }
 
 body {
-    background-image: url(./images/background.png);
-    min-height: 100vh;
+  background-image: url(./images/background.png);
+  min-height: 100vh;
 }
 
 .borders {
-    background:#fff;
-    border: solid black;
-    border-color: black;
-  }
+  background: #fff;
+  border: solid black;
+  border-color: black;
+}
 
 .main-page-menu {
-    height: 95vh;
-    width: 90vw;
-    margin:0;
+  height: 95vh;
+  width: 90vw;
+  margin: 0;
+  padding: $standard-padding;
+  margin-top: $standard-margin * 2;
+  margin-left: $standard-margin * 2;
+  @include flex-column;
+  color: $brand-font-color;
+  background-color: $nav-bar-background;
+  @include even-border;
+
+  #heading,
+  div {
+    width: 90%;
+    text-align: center;
+    margin: $standard-margin;
+  }
+  #heading {
+    height: 25%;
     padding: $standard-padding;
-    margin-top: $standard-margin*2;
-    margin-left: $standard-margin*2;
-    @include flex-column;
-    color: $brand-font-color;
-    background-color:$nav-bar-background;
-    @include even-border;
-
-    #heading , div {
-        width: 90%;
-        text-align: center;
-        margin: $standard-margin;       
-    }
-    #heading {
-        height: 25%;
-        padding: $standard-padding;
-        margin-bottom: $standard-margin;
-        font-size:26px;
-            
-    }
-    .socials {
-        margin-top:0;
-        height: 10%;
-        @include flex-row;
-
-        .links {
-            font-size: 25px;
-        }
+    margin-bottom: $standard-margin;
+    font-size: 26px;
+  }
+  .socials {
+    margin-top: 0;
+    height: 10%;
+    @include flex-row;
     
-       
+
+    .links {
+      font-size: 25px;
+    }
+  }
+
+  .intro {
+    background-image: url("./images/hi.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    height: 80%;
+
+    &:hover {
+      background-image: url("./images/hello.jpg");
     }
 
-    .intro {
-        background-image: url("./images/hi.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: right bottom;
-        height: 80%;
-
-        &:hover{ 
-            background-image: url("./images/hello.jpg"); 
-        }
-
-        h2 {
-            font-size: 32px;
-            margin:$standard-margin;
-            text-align: start;
-        }
-
-        p {
-            font-size: $mobile-font*1.5;
-            margin:$standard-margin;
-            text-align: start;
-        }
+    h2 {
+      font-size: 32px;
+      margin: $standard-margin;
+      text-align: start;
     }
 
-    .nav-buttons {
-        @include flex-row;
-        font-size: $mobile-font;
-        margin-top:0;
-        transform: rotate(-2deg);
+    p {
+      font-size: $mobile-font * 1.5;
+      margin: $standard-margin;
+      text-align: start;
     }
-} 
-    
+  }
+
+  .nav-buttons {
+    @include flex-row;
+    font-size: $mobile-font;
+    margin-top: 0;
+    transform: rotate(-2deg);
+  }
+}
+
 .links {
-   padding:4px; 
-   color:$brand-font-color;
-   text-decoration: none; 
-   
-    &:active {
-        text-shadow: $shadow;
-    }
+  padding: 4px;
+  color: $brand-font-color;
+  text-decoration: none;
+
+  &:active {
+    text-shadow: $shadow;
+  }
 }
 
-#nav-bar , .intro {
-    border: $basic-border;
-    text-align: start;
-    @include odd-border;
+#nav-bar,
+.intro {
+  border: $basic-border;
+  text-align: start;
+  @include odd-border;
 }
-
 
 #bottom-left {
-    position: absolute;
-    bottom: 0px;
-    right:0px;
-    margin:$standard-margin auto auto $standard-margin;
-    height: 95vh; 
-    width: 70vw;
-    display: none;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: $standard-margin auto auto $standard-margin;
+  height: 95vh;
+  width: 70vw;
+  display: none;
 }
 
-#blog-page , #portfolio-page {
-    display:flex;
-    justify-content: flex-start;
-    align-content: flex-start;
+#blog-page,
+#portfolio-page {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 // ---> sidebar <---
 
 .side-bar {
-    position: fixed;
-    top: 0;
-    left: -25vw;
-    opacity: 0.4;
-    background-color:($side-primary);
-    height: 100vh;
-    width: 30vw;
+  position: fixed;
+  top: 0;
+  left: -25vw;
+  opacity: 0.4;
+  background-color: ($side-primary);
+  height: 100vh;
+  width: 30vw;
+  @include flex-column;
+  color: $brand-font-color;
+  border-width: 5px 3px 3px 5px;
+  border-radius: 95% 94% 97% 5%/0% 7% 6% 5%;
+  justify-content: space-evenly;
+  transition: 0.3s;
+  z-index: 10;
+
+  &:hover {
+    background-color: $side-primary;
+    opacity: 1;
+    left: 0vw;
+  }
+
+  #heading {
+    background-image: url("./images/cartoon-boom.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
+    height: 20vh;
+    width: 28vw;
     @include flex-column;
-    color: $brand-font-color;
-    border-width: 5px 3px 3px 5px;
-    border-radius: 95% 94% 97% 5%/0% 7% 6% 5%;
-    justify-content: space-evenly;
-    transition: 0.3s;
-    z-index: 10;
+    justify-content: center;
 
-    &:hover {
-        background-color: $side-primary;
-        opacity: 1;
-        left: 0vw;
+    h1 {
+      padding: 8px;
+      margin-left: 8px;
+      font-size: 28px;
     }
-    
-    #heading {
+  }
 
-        background-image: url("./images/cartoon-boom.png");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        overflow: hidden;
-        height: 20vh;
-        width: 28vw;
-        @include flex-column;
-        justify-content: center;
-        
+  a {
+    font-size: 24px;
+    text-align: center;
+    color: $brand-font-color;
+  }
 
-        h1 {
-            padding: 8px;
-            margin-left: 8px;
-            font-size: 28px;
-        }
-    }    
+  h2 {
+    text-align: center;
+  }
+
+  .socials {
+    @include flex-column;
+    justify-content: space-evenly;
+    font-size: 20px;
+    height: 55%;
+    width: 95%;
+    color: $brand-font-color;
+    border-radius: 5px;
+    background-color: $nav-bar-background;
+
+    &:visited {
+      color: $brand-font-color;
+    }
 
     a {
-        font-size: 24px;
-        text-align: center;
-        color: $brand-font-color;
+      font-size: 22px;
+      transition: 0.3s;
+
+      &:hover {
+        @include odd-border;
+        border: $basic-border;
+      }
+
+      span {
+        @include even-border;
+        border: $basic-border;
+      }
     }
 
-    h2 {
-        text-align: center;
+    div {
+      @include flex-column;
+      justify-content: space-evenly;
+      margin: 3px;
+      text-align: center;
+      background-color: $nav-bar-background;
+
+      a {
+        font-size: 22px;
+        margin: 3px;
+        border: none;
+      }
     }
-
-    .socials {
-        @include flex-column;
-        justify-content: space-evenly;
-        font-size: 20px;
-        height: 55%;
-        width: 95%;
-        color:  $brand-font-color;
-        border-radius: 5px;
-        background-color: $nav-bar-background;
-
-        &:visited { 
-            color: $brand-font-color;
-        }
-
-        a {
-            font-size: 22px;
-            transition: 0.3s;
-
-            &:hover {
-                @include odd-border;
-                border: $basic-border;    
-            }
-
-            span {
-                @include even-border;
-                border: $basic-border;
-            }
-        }
-
-        div {
-            @include flex-column;
-            justify-content: space-evenly;    
-            margin: 3px;
-            text-align: center;
-            background-color: $nav-bar-background;
-
-            a {
-                font-size: 22px;
-                margin: 3px;
-                border: none;
-            }
-        }
-    }
+  }
 }
 
 // ---> about me <---
 #about-me {
-    height:100vh;
-    width: 100vw;
-    position: relative;
-    text-align: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  text-align: center;
+
+  #facts {
+    margin: 0 auto;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     h2 {
-        color: rgba(247, 247, 247, 0.863);
-        padding: $standard-padding;
+      color: rgba(247, 247, 247, 0.863);
+      padding: $standard-padding;
+      font-size: 30px;
+      margin-top: $standard-margin * 3;
     }
 
-    .peering {
-        height: 30%;
-        width: 50%;
-        position: absolute;
-        right: 0;
-        bottom: 0; 
-        border-top-left-radius: 90%;
-        border:2px solid black;
+    .paper {
+      background: #fff;
+      padding: 30px;
+      position: relative;
+      width: 90%;
+      height: 50%;
+      margin-left: $standard-margin * 2;
+      margin-bottom: $standard-margin * 3;
     }
+
+    .paper,
+    .paper::before,
+    .paper::after {
+      /* Styles to distinguish sheets from one another */
+      box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+      border: 1px solid #bbb;
+    }
+
+    .paper::before,
+    .paper::after {
+      content: "";
+      position: absolute;
+      height: 95%;
+      width: 99%;
+      background-color: #eee;
+    }
+
+    .paper::before {
+      right: 15px;
+      top: 0;
+      transform: rotate(-1deg);
+      z-index: -1;
+    }
+
+    .paper::after {
+      top: 5px;
+      right: -5px;
+      transform: rotate(1deg);
+      z-index: -2;
+    }
+
+    #fact { 
+        height: 30%;
+        font-size: 26px;
+        margin: $standard-margin * 6 auto;
+        transform: rotate(25deg);
+        color: #ff3434;
+    }
+
+    #watermark{
+        color: rgba(0, 0, 0, 0.082);
+        margin: $standard-margin;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+    #click {
+      width: 45%;
+      padding: 10px 15px;
+      border-radius: 10px;
+      border: 3px solid black;
+      background: white;
+      margin-left: $standard-margin;
+    }
+  }
+
+
+  .peering {
+    height: 30%;
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-top-left-radius: 90%;
+    border: 2px solid black;
+  }
 }
 
 //Blog and portfolio templates//
 
 #bottom-half {
-    margin:$standard-margin auto;
-   
-    #section1 , #section2 {
-        @include flex-column;
-        height: 100vh;
-        width: 60vw;
-        margin-bottom: $standard-margin; 
+  margin: $standard-margin auto;
 
-        .card {
-            height: 30%;
-            width: 100%;
-            position: relative;
-            background-color: black;
-           
-            h2 {
-                position: absolute;
-                color:$brand-text;
-                top:40%;
-                text-shadow: 3px 2px black;  
-                
-                a {
-                    color: $brand-text;
-                    :hover{
-                        font-size: 16px;
-                    }
-                }
-            }
+  #section1,
+  #section2 {
+    @include flex-column;
+    height: 100vh;
+    width: 60vw;
+    margin-bottom: $standard-margin;
 
-            img {
-                height: 100%;
-                width: 100%;
-                @include odd-border;
-                opacity: 70%;
+    .card {
+      height: 30%;
+      width: 100%;
+      position: relative;
+      background-color: black;
 
-                &:focus {
-                    opacity: 100%;
-                }                              
-            }
-        }        
+      h2 {
+        position: absolute;
+        color: $brand-text;
+        top: 40%;
+        text-shadow: 3px 2px black;
+
+        a {
+          color: $brand-text;
+          :hover {
+            font-size: 16px;
+          }
+        }
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        @include odd-border;
+        opacity: 70%;
+
+        &:focus {
+          opacity: 100%;
+        }
+      }
     }
+
+    p {
+      color: white;
+      margin-bottom: $standard-margin;
+    }
+  }
 }
 
 //portfolio styles
 
 #portfolio-page {
-
-    #section1 {
-
-        img {
-        
-            background-color: rgb(185, 184, 184);
-
-
-            
-        }
+  #section1 {
+    img {
+      background-color: rgb(185, 184, 184);
     }
+  }
 }

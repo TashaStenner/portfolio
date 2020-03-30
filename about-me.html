@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css?family=Bangers&display=swap"
       rel="stylesheet"
     />
+    <script async defer src="script.js"></script>
     <title>Natasha Stenner</title>
   </head>
   <body>
@@ -23,9 +24,8 @@
         <a href="./index.html" class="links">Home</a>
         <a href="./blog.html" class="links"> Blog</a>
         <a href="./portfolio.html" class="links">Portfolio</a>
-        <a href="" class="links">CV</a>
         <div>
-          <a class="fas fa-at links" href=""></a>
+          <a class="fas fa-at links" href="mailto:tashas1997@gmail.com"></a>
           <a
             class="fab fa-github links"
             href="https://github.com/TashaStenner"
@@ -34,14 +34,19 @@
             class="fab fa-linkedin-in links"
             href="https://www.linkedin.com/in/tasha-stenner-4196671a1/"
           ></a>
-          <a class="fas fa-mobile-alt links"></a>
         </div>
       </div>
     </section>
     <section id="about-me">
+      <div id="facts">
         <h2>Random Facts About Me</h2>
-   
-      <img class="peering" src="/images/peering2.png" alt="" />
+        <div class="paper">
+          <p id="fact"></p>
+          <p id="watermark">Dunder Mifflin</p>
+        </div>
+        <p id="click">Click on ME for new fact</p>
+      </div>
+      <img class="peering" id="randomBtn" src="/images/peering2.png" alt="" />
     </section>
   </body>
 </html>
