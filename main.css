@@ -151,6 +151,18 @@ body {
           transform: rotate(-2deg);
 }
 
+#blog-page,
+#portfolio-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
 @media only screen and (min-width: 768px) {
   .main-page-menu {
     width: 95vw;

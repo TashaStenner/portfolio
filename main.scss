@@ -109,12 +109,12 @@ body {
   @include odd-border;
 }
 
-// #blog-page,
-// #portfolio-page {
-//   display: flex;
-//   justify-content: flex-start;
-//   align-content: flex-start;
-// }
+#blog-page,
+#portfolio-page {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
 
 @media only screen and (min-width: 768px) {
   .main-page-menu {
