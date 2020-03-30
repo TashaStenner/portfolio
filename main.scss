@@ -11,7 +11,6 @@
 body {
   background-image: url(./images/background.png);
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .borders {
@@ -20,12 +19,10 @@ body {
   border-color: black;
 }
 
-//Main Page//
-
 .main-page-menu {
   height: 95vh;
   width: 90vw;
-  margin: 0 auto;
+  margin: 0;
   padding: $standard-padding;
   margin-top: $standard-margin * 2;
   margin-left: $standard-margin * 2;
@@ -33,10 +30,6 @@ body {
   color: $brand-font-color;
   background-color: $nav-bar-background;
   @include even-border;
-
-  h1 {
-    transform: rotate(-1deg);
-  }
 
   #heading,
   div {
@@ -109,6 +102,16 @@ body {
   @include odd-border;
 }
 
+#bottom-left {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: $standard-margin auto auto $standard-margin;
+  height: 95vh;
+  width: 70vw;
+  display: none;
+}
+
 #blog-page,
 #portfolio-page {
   display: flex;
@@ -119,23 +122,32 @@ body {
 @media only screen and (min-width: 768px) {
   .main-page-menu {
     width: 95vw;
-
+    
+    h1,
     .socials {
       transform: rotate(-1deg);
-
-      .links {
-        font-size: 28px;
-      }
     }
 
     .intro {
-      h2 {
+      h2, p {
         margin-left: $standard-margin * 3;
+        letter-spacing: 0.1rem;
       }
 
-      p {
-        margin: $standard-margin * 2;
-      }
+    }
+
+    .nav-buttons {
+      padding: $standard-padding;
+      font-size: 28px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-page-menu {
+
+    .socials {
+      margin-left: $standard-margin * 3;
     }
   }
 }
@@ -267,56 +279,6 @@ body {
       }
     }
   }
-}
-
-@media only screen and (min-width: 768px) {
-  .side-bar {
-  
-  
-    #heading {
-     overflow: auto;
-     height: 30%;
-  
-      h1 {
-       font-size: 40px;
-      }
-    }
-   
-    h2 {
-      font-size: 30px;
-    }
-  
-    .socials {
-    
-  
-      &:visited {
-        
-      }
-  
-      a {
-        
-  
-        &:hover {
-        
-        }
-  
-        span {
-         
-        }
-      }
-  
-      div {
-       
-        a {
-        
-        }
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 1100px) {
- 
 }
 
 // ---> about me <---

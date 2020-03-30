@@ -9,7 +9,6 @@
 body {
   background-image: url(./images/background.png);
   min-height: 100vh;
-  overflow: hidden;
 }
 
 .borders {
@@ -21,7 +20,7 @@ body {
 .main-page-menu {
   height: 95vh;
   width: 90vw;
-  margin: 0 auto;
+  margin: 0;
   padding: 8px;
   margin-top: 16px;
   margin-left: 16px;
@@ -44,11 +43,6 @@ body {
   border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
-}
-
-.main-page-menu h1 {
-  -webkit-transform: rotate(-1deg);
-          transform: rotate(-1deg);
 }
 
 .main-page-menu #heading,
@@ -151,6 +145,16 @@ body {
           transform: rotate(-2deg);
 }
 
+#bottom-left {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  margin: 8px auto auto 8px;
+  height: 95vh;
+  width: 70vw;
+  display: none;
+}
+
 #blog-page,
 #portfolio-page {
   display: -webkit-box;
@@ -167,18 +171,24 @@ body {
   .main-page-menu {
     width: 95vw;
   }
+  .main-page-menu h1,
   .main-page-menu .socials {
     -webkit-transform: rotate(-1deg);
             transform: rotate(-1deg);
   }
-  .main-page-menu .socials .links {
+  .main-page-menu .intro h2, .main-page-menu .intro p {
+    margin-left: 24px;
+    letter-spacing: 0.1rem;
+  }
+  .main-page-menu .nav-buttons {
+    padding: 8px;
     font-size: 28px;
   }
-  .main-page-menu .intro h2 {
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-page-menu .socials {
     margin-left: 24px;
-  }
-  .main-page-menu .intro p {
-    margin: 16px;
   }
 }
 
@@ -361,19 +371,6 @@ body {
   font-size: 22px;
   margin: 3px;
   border: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .side-bar #heading {
-    overflow: auto;
-    height: 30%;
-  }
-  .side-bar #heading h1 {
-    font-size: 40px;
-  }
-  .side-bar h2 {
-    font-size: 30px;
-  }
 }
 
 #about-me {
