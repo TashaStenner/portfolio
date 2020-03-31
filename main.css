@@ -516,6 +516,10 @@ body {
   border: 2px solid black;
 }
 
+#about-me .peering:hover {
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 425px) {
   #about-me #facts #click {
     font-size: 20px;
