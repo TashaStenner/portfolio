@@ -145,16 +145,6 @@ body {
           transform: rotate(-2deg);
 }
 
-#bottom-left {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  margin: 8px auto auto 8px;
-  height: 95vh;
-  width: 70vw;
-  display: none;
-}
-
 #blog-page,
 #portfolio-page {
   display: -webkit-box;
@@ -176,7 +166,8 @@ body {
     -webkit-transform: rotate(-1deg);
             transform: rotate(-1deg);
   }
-  .main-page-menu .intro h2, .main-page-menu .intro p {
+  .main-page-menu .intro h2,
+  .main-page-menu .intro p {
     margin-left: 24px;
     letter-spacing: 0.1rem;
   }
@@ -373,6 +364,47 @@ body {
   border: none;
 }
 
+@media only screen and (min-width: 425px) {
+  .side-bar #heading h1 {
+    font-size: 32px;
+  }
+  .side-bar h2 {
+    font-size: 32px;
+  }
+  .side-bar .socials a {
+    font-size: 28px;
+  }
+  .side-bar .socials div a {
+    font-size: 32px;
+  }
+}
+
+@media only screen and (min-width: 725px) {
+  .side-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    -webkit-transition: 0;
+    transition: 0;
+    z-index: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .side-bar {
+    width: 20vw;
+  }
+  .side-bar #heading {
+    width: 20vw;
+    height: 22vh;
+  }
+  .side-bar #heading h1 {
+    font-size: 38px;
+    margin-left: 16px;
+  }
+}
+
 #about-me {
   height: 100vh;
   width: 100vw;
@@ -401,6 +433,7 @@ body {
   padding: 8px;
   font-size: 30px;
   margin-top: 24px;
+  letter-spacing: 0.03em;
 }
 
 #about-me #facts .paper {
@@ -453,7 +486,7 @@ body {
   margin: 48px auto;
   -webkit-transform: rotate(25deg);
           transform: rotate(25deg);
-  color: #ff3434;
+  color: #f5cb34;
 }
 
 #about-me #facts #watermark {
@@ -483,12 +516,74 @@ body {
   border: 2px solid black;
 }
 
+@media only screen and (min-width: 425px) {
+  #about-me #facts #click {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #about-me {
+    width: 70vw;
+    position: absolute;
+    right: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  #about-me {
+    width: 80vw;
+    position: absolute;
+    right: 0;
+  }
+  #about-me #facts h2 {
+    font-size: 40px;
+    margin: 24px auto;
+  }
+  #about-me #facts .paper {
+    width: 80%;
+    margin: auto;
+    margin-bottom: 80px;
+  }
+  #about-me #facts #fact {
+    width: 70%;
+    font-size: 30px;
+    margin: 80px;
+  }
+  #about-me #facts #click {
+    width: 35%;
+  }
+  #about-me .peering {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  #about-me #facts h2 {
+    font-size: 48px;
+  }
+  #about-me #facts .paper {
+    width: 75%;
+    margin-bottom: 104px;
+  }
+  #about-me #facts #fact {
+    width: 65%;
+    font-size: 38px;
+    margin: 104px;
+  }
+  #about-me #facts #click {
+    font-size: 30px;
+  }
+  #about-me .peering {
+    width: 25%;
+  }
+}
+
 #bottom-half {
   margin: 8px auto;
 }
 
-#bottom-half #section1,
-#bottom-half #section2 {
+#bottom-half #section1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,39 +597,35 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 100vh;
   width: 60vw;
-  margin-bottom: 8px;
 }
 
-#bottom-half #section1 .card,
-#bottom-half #section2 .card {
-  height: 30%;
+#bottom-half #section1 .card {
+  height: 30vh;
   width: 100%;
+  margin-bottom: 8px;
   position: relative;
   background-color: black;
 }
 
-#bottom-half #section1 .card h2,
-#bottom-half #section2 .card h2 {
+#bottom-half #section1 .card h2 {
   position: absolute;
   color: #f5cb34;
   top: 40%;
   text-shadow: 3px 2px black;
+  margin-left: 8px;
+  letter-spacing: 0.05em;
 }
 
-#bottom-half #section1 .card h2 a,
-#bottom-half #section2 .card h2 a {
+#bottom-half #section1 .card h2 a {
   color: #f5cb34;
 }
 
-#bottom-half #section1 .card h2 a :hover,
-#bottom-half #section2 .card h2 a :hover {
+#bottom-half #section1 .card h2 a :hover {
   font-size: 16px;
 }
 
-#bottom-half #section1 .card img,
-#bottom-half #section2 .card img {
+#bottom-half #section1 .card img {
   height: 100%;
   width: 100%;
   border-width: 3px 3px 5px 5px;
@@ -542,20 +633,104 @@ body {
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
   opacity: 70%;
+  background-color: white;
 }
 
-#bottom-half #section1 .card img:focus,
-#bottom-half #section2 .card img:focus {
+#bottom-half #section1 .card img:focus {
   opacity: 100%;
 }
 
-#bottom-half #section1 p,
-#bottom-half #section2 p {
+#bottom-half #section1 p {
   color: white;
   margin-bottom: 8px;
 }
 
-#portfolio-page #section1 img {
-  background-color: #b9b8b8;
+@media only screen and (min-width: 425px) {
+  #bottom-half {
+    width: 70vw;
+  }
+  #bottom-half #section1 {
+    height: auto;
+    width: auto;
+  }
+  #bottom-half #section1 .card {
+    margin: 4px;
+    height: 30vh;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 425px) and (min-width: 768px) {
+  #bottom-half {
+    width: 65vw;
+    position: absolute;
+    right: 0;
+  }
+  #bottom-half #section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: auto;
+    width: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #bottom-half #section1 p {
+    display: none;
+  }
+  #bottom-half #section1 .card {
+    height: 40vh;
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 425px) and (min-width: 768px) {
+  #bottom-half {
+    width: 65vw;
+    position: absolute;
+    right: 0;
+  }
+  #bottom-half #section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    height: auto;
+    width: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #bottom-half #section1 p {
+    display: none;
+  }
+  #bottom-half #section1 .card {
+    height: 40vh;
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  #portfolio-page #section1 img {
+    background-color: #b9b8b8;
+  }
 }
 /*# sourceMappingURL=main.css.map */
