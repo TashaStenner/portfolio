@@ -696,7 +696,7 @@ body {
 
 @media only screen and (min-width: 425px) and (min-width: 768px) {
   #bottom-half {
-    width: 65vw;
+    width: 70vw;
     position: absolute;
     right: 0;
   }
@@ -714,8 +714,6 @@ body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    height: auto;
-    width: auto;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
@@ -725,6 +723,22 @@ body {
   #bottom-half #section1 .card {
     height: 40vh;
     width: 45%;
+  }
+}
+
+@media only screen and (min-width: 425px) and (min-width: 1024px) {
+  #bottom-half {
+    width: 80vw;
+    position: absolute;
+    right: 0;
+  }
+  #bottom-half #section1 {
+    margin-top: 112px;
+  }
+  #bottom-half #section1 .card {
+    height: 30vh;
+    width: 30%;
+    margin: 8px;
   }
 }
 

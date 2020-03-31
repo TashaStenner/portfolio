@@ -597,14 +597,12 @@ body {
 
   @media only screen and (min-width: 768px) {
     #bottom-half {
-      width: 65vw;
+      width: 70vw;
       position: absolute;
       right: 0;
 
       #section1 {
         @include flex-row;
-        height: auto;
-        width: auto;
         flex-wrap: wrap;
 
         p {
@@ -614,6 +612,23 @@ body {
         .card {
           height: 40vh;
           width: 45%;
+        }
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1024px) {
+    #bottom-half {
+      width: 80vw;
+      position: absolute;
+      right: 0;
+
+      #section1 {
+        margin-top: $standard-margin * 14;
+        .card {
+          height: 30vh;
+          width: 30%;
+          margin: $standard-margin;
         }
       }
     }
