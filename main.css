@@ -736,9 +736,6 @@ body {
     position: absolute;
     right: 0;
   }
-  #bottom-half #section1 {
-    margin-top: 112px;
-  }
   #bottom-half #section1 .card {
     height: 30vh;
     width: 30%;
