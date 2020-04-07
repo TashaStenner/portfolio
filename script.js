@@ -12,7 +12,8 @@ const facts = [
   "I want to go to travel more",
   "I used to be an Assistant Manager in a hotel and a cinema", 
   "I am a Personal License holder", 
-  "I finished GCSE computing with 1/2 a mark away from an A*"
+  "I finished GCSE computing with 1/2 a mark away from an A*", 
+  "I have worked fully remote for 5 weeks of my course", 
 ];
 const totalFacts = facts.length;
 
