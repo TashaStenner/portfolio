@@ -13,7 +13,9 @@ const facts = [
   "I used to be an Assistant Manager in a hotel and a cinema", 
   "I am a Personal License holder", 
   "I finished GCSE computing with 1/2 a mark away from an A*", 
-  "I have worked fully remote for 5 weeks of my course", 
+  "I have successfully completed a 12 week bootcamp with _Nology",
+  "I have worked fully remote for 5 weeks of my _Nology course", 
+  "I won a tech award whilst on my course for completing a challenge in the least amount of code"
 ];
 const totalFacts = facts.length;
 
